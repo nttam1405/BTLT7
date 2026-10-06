@@ -1,0 +1,5 @@
+body { font-family: Arial; }
+h3 { color: #1a5c1a; text-align: center; }
+table { margin: auto; }
+td:first-child { text-align: right; color: #1a5c1a; font-size: 13px; }
+.err { color: red; font-size: 12px; }

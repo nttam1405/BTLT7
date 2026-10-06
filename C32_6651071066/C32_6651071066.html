@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Display a random image.</title>
+  <style type="text/css">
+    body { margin-top: 30px; }
+    #imageContainer { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div>
+    <button id="jsstyle" onclick="display_random_image();">Show Image</button>
+  </div>
+
+  <!-- Nơi hiển thị ảnh sau khi bấm nút -->
+  <div id="imageContainer"></div>
+
+  <script>
+    // Dùng link ảnh Unsplash/Lorem Flickr đảm bảo luôn tải được ảnh
+    var images = [
+      {
+        src: "https://picsum.photos/id/1015/240/160",
+        width: 240,
+        height: 160
+      },
+      {
+        src: "https://picsum.photos/id/1018/320/195",
+        width: 320,
+        height: 195
+      },
+      {
+        src: "https://picsum.photos/id/1025/500/343",
+        width: 500,
+        height: 343
+      }
+    ];
+
+    function display_random_image() {
+      var randomIndex = Math.floor(Math.random() * images.length);
+      var selectedImg = images[randomIndex];
+
+      var container = document.getElementById("imageContainer");
+      
+      // Xóa ảnh trước đó để hiển thị ảnh mới
+      container.innerHTML = "";
+
+      // Tạo phần tử <img> mới
+      var imgElement = document.createElement("img");
+      imgElement.src = selectedImg.src;
+      imgElement.width = selectedImg.width;
+      imgElement.height = selectedImg.height;
+      imgElement.alt = "Random Image";
+
+      container.appendChild(imgElement);
+    }
+  </script>
+</body>
+</html>

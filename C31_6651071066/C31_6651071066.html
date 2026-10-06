@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    body { margin: 30px; }
+  </style>
+  <meta charset="utf-8" />
+  <title>Remove items</title>
+</head>
+<body>
+  <form>
+    <select id="colorSelect">
+      <option>Red</option>
+      <option>Green</option>
+      <option>White</option>
+      <option>Black</option>
+    </select>
+    <input type="button" onclick="removecolor()" value="Select and Remove">
+  </form>
+
+  <script>
+    function removecolor() {
+      var select = document.getElementById("colorSelect");
+      // Kiểm tra nếu có phần tử được chọn
+      if (select.selectedIndex !== -1) {
+        select.remove(select.selectedIndex);
+      }
+    }
+  </script>
+</body>
+</html>

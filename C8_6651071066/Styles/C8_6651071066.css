@@ -1,0 +1,4 @@
+body { margin: 30px; font-family: Arial; }
+input[type=text] { width: 60px; }
+#result { width: 100px; }
+button { width: 32px; }
